@@ -1,8 +1,16 @@
 import {typeBooking} from "./reducer";
 
-export type Action = { type: "ADD_BOOKING"; payload: typeBooking };
-
-export const addBooking = (booking: typeBooking): Action => ({
+export const addBooking = (booking: typeBooking) => ({
     type: "ADD_BOOKING",
     payload: booking,
+});
+
+export const deleteBooking = (booking: typeBooking) => ({
+    type: "DELETE_BOOKING",
+    payload: booking,
+});
+
+export const assignBooking = (details: any) => ({
+    type: "ASSIGN_BOOKING",
+    payload: details,
 });
