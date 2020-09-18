@@ -13,9 +13,6 @@ import './App.css';
 
 const { TabPane } = Tabs;
 function App() {
-    const bookings = useSelector<BookingState, BookingState["bookings"]>(
-        (state) => state.bookings
-    );
     const dispatch = useDispatch();
 
     const onCreateBooking = (booking: typeBooking) => {
@@ -51,9 +48,7 @@ function App() {
                     </Row>
                 </TabPane>
             </Tabs>
-
         </div>
-
     );
 }
 
