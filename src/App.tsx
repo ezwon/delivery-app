@@ -1,8 +1,8 @@
 import React from "react";
 import {Row, Col, Tabs } from 'antd';
-import {useSelector, useDispatch} from "react-redux";
+import {useDispatch} from "react-redux";
 
-import {BookingState, typeBooking} from "./bookings/reducer";
+import {typeBooking} from "./bookings/reducer";
 import {addBooking, deleteBooking, assignBooking} from "./bookings/actions";
 
 import {CreateBooking} from "./bookings/components/CreateBooking";
