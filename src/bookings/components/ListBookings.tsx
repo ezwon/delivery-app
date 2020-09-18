@@ -10,7 +10,6 @@ interface ListBookingsProps {
 }
 
 export const ListBookings: React.FC<ListBookingsProps> = ({deleteBooking}) => {
-    const [name, setName] = React.useState("");
     const bookings = useSelector<BookingState, BookingState["bookings"]>(
         (state) => state.bookings
     );
@@ -70,6 +69,7 @@ export const ListBookings: React.FC<ListBookingsProps> = ({deleteBooking}) => {
             ),
         },
     ];
+
     return (
         <Table rowKey={(record)=>record.id} columns={columns} dataSource={bookings}/>
     );
